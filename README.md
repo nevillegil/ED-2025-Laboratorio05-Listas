@@ -14,10 +14,6 @@
 # Tabla de contenidos
 
 <!-- TOC -->
-
-- [Ejercicios de Listas: Lista Simple, Lista Circular y Lista Doblemente Enlazada](#ejercicios-de-listas-lista-simple-lista-circular-y-lista-doblemente-enlazada)
-        - [Información del Proyecto](#informaci%C3%B3n-del-proyecto)
-- [Tabla de contenidos](#tabla-de-contenidos)
 - [¿Cómo enfrentarse a los ejercicios?](#%C2%BFc%C3%B3mo-enfrentarse-a-los-ejercicios)
 - [Ejercicios con Listas Enlazadas Simples](#ejercicios-con-listas-enlazadas-simples)
     - [Ejercicio 1: Cálculo de la complejidad en notación O grande](#ejercicio-1-c%C3%A1lculo-de-la-complejidad-en-notaci%C3%B3n-o-grande)
