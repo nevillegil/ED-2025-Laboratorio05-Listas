@@ -36,21 +36,21 @@
 Antes de comenzar con cada uno de los ejercicios: 
 
 1. Lee detenidamente el enunciado **completo**.
-2. Identifica cuál es el objetivo del ejercicio:
-    - Identificar el tipo de elementos que se almacenará en la cola: 
+2. Identifica el objetivo del ejercicio:
+    - Identifica el tipo de elementos que se almacenará en la estructura de datos: 
         - Ejemplos: enteros, caracteres, registros, etc.
-        - Esto va a determinar la definición de los nodos de la cola (o el tipo de array en caso de no ser una cola implementada en memoria dinámica).
-    - Extender o modificar funcionalidades de la cola:
-        - Ejemplos: contar el número de elementos de la cola, verificar si un elemento está en la cola, eliminar un elemento, etc.
+        - Esto va a determinar la definición de los nodos de la misma (o el tipo de array en caso de no estar implementada en memoria dinámica).
+    - Analiza si debes extender o modificar funcionalidades de un TAD existente:
+        - Ejemplos: contar el número de elementos de una lista, verificar si un elemento está en la lista, eliminar un elemento, etc.
         - Generar nuevos procedimientos o funciones requerirá utilizar las operaciones principales.
-        - Es decir, nuevamente deberemos **trabajar en la propia unidad** de la cola ya que estamos extendiendo su funcionalidad. Tendremos el "rol" de implementador de la unidad.
-    - Utilizar la cola para resolver un problema específico:
-        - Ejemplos: verificar si una expresión aritmética está balanceada, verificar si una palabra es palíndroma, utilizarla para representar un conjunto de elementos, etc.
-        - En este caso, deberemos utilizar las operaciones básicas de la unidad de la cola para resolver el problema, no podemos modificar la definición de la cola.
-        - Por lo tanto, deberemos **usar** la cola en el programa principal para resolver el problema. Tendremos el rol de usuario externo de la unidad cola y por lo tanto no la podremos modificar.
+        - Es decir, nuevamente deberemos **trabajar en la propia unidad** (TAD lista) ya que estamos extendiendo su funcionalidad. Tendremos en este caso el "rol" de implementador de la unidad.
+    - Utilizar nuestro TAD para resolver un problema específico:
+        - Ejemplos de TADs anteriores: verificar si una expresión aritmética está balanceada (TAD Pila), verificar si una palabra es palíndroma, utilizarla para representar un conjunto de elementos, etc.
+        - En este caso, deberemos utilizar las operaciones básicas de la unidad que nos dan para resolver el problema, pero no podemos modificar el TAD lista.
+        - Por lo tanto, deberemos **usar** la lista en el programa principal para resolver el problema. Tendremos el rol de usuario externo de la unidad y por lo tanto no la podremos modificar.
     
-2. Abre cada uno de los archivos proporcionados y estudia el código proporcionado.
-3. Haz que el programa compile y ejecútalo aunque de primeras no haga todo lo que se pide.
+2. Abre cada uno de los archivos proporcionados y estudia el código que te damos.
+3. Haz que el programa compile y ejecútalo, aunque de primeras no haga todo lo que se pide.
 4. Realiza los ejercicios de manera ordenada, comprobando que cada uno de ellos funciona correctamente antes de pasar al siguiente.
 
 
@@ -66,10 +66,10 @@ Para ello, se proporciona el código de la lista enlazada simple en el archivo `
 
 En este ejercicio, trabajaremos con operaciones básicas de la lista enlazada simple.
 
-- `uListaEnlazadaSimple.pas`: Implementación de la lista enlazada simple. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. No es necesario modificar este archivo.
+- `uListaEnlazadaSimple.pas`: Implementación de la lista enlazada simple. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. No debes modificar este archivo.
 - `listas_ej1.pas`: Programa principal que utiliza la lista enlazada simple. Este es el fichero en el que deberás realizar las implementaciones necesarias.
 
-¿Qué rol tendremos en este ejercicio? Estaremos utilizando la lista enlazada simple para realizar operaciones básicas. Por lo tanto, tendremos el "rol" de usuario externo de la unidad. No modificaremos la implementación de la lista enlazada simple, sino que utilizaremos las operaciones básicas que nos proporciona.
+¿Qué rol tendremos en este ejercicio? Estaremos utilizando la lista enlazada simple para realizar operaciones básicas y por lo tanto, tendremos el "rol" de usuario del TAD, no de implementador. No modificaremos la implementación de la lista enlazada simple, sino que utilizaremos las operaciones básicas que nos proporciona.
 
 Realiza las siguientes operaciones sobre listas enlazadas y verifica el estado resultante:
 
@@ -87,13 +87,13 @@ Realiza las siguientes operaciones sobre listas enlazadas y verifica el estado r
     - Estado esperado: La lista no cambia: `[1, 2, 3, 4, 5]`.
 
 4. Eliminación y limpieza  
-    - Mostrar el número de elementos (debe ser `5`).  
+    - Mostrar el número de elementos (tras implementar la parte (3) debería ser `5`).  
     - Eliminar el primer elemento.  
     - Estado esperado después de eliminar: `[2, 3, 4, 5]` (nuevo tamaño: `4`).  
     - Limpiar la lista completamente.  
     - Estado esperado: `[]` (nuevo tamaño: `0`).
 
-5. Copia de lista y verificación de vacío  
+5. Realizar una copia o duplicado de una lista y verificación de lista vacía  
     - Verificar si la lista está vacía (debe ser `true`).  
     - Insertar `1` al final.  
     - Estado esperado: `[1]` (no vacía).  
@@ -107,34 +107,34 @@ Realiza las siguientes operaciones sobre listas enlazadas y verifica el estado r
     - Insertar `0` al inicio de `lista1`.  
     - Estado esperado: `[0, 1]`.
 
-7. Eliminación al final  
+7. Eliminación de un elemento al final  
     - Eliminar el último elemento de `lista1`.  
     - Estado esperado: `[0]`.
 
-8. Eliminación de elemento específico  
+8. Eliminación de un elemento específico  
     - Insertar `3` al final.  
     - Estado antes de eliminar: `[0, 3]`.  
     - Eliminar el elemento `3`.  
     - Estado esperado: `[0]`.
 
-9. Búsqueda de elemento (iterativa)  
+9. Búsqueda de un elemento (iterativa)  
     - Verificar si el elemento `2` está en la lista.  
     - Resultado esperado: `El 2 no está en la lista`.
 
-10. Búsqueda de elemento (recursiva)  
-     - Verificar recursivamente si el elemento `1` está en la lista.  
-     - Resultado esperado: `El 1 no está en la lista (recursivo)`.
+10. Igual al inicio y al final   
+     - Verificar si el elemento del final de la lista es igual al del inicio. Si la lista está vacía consideraremos que esta condición también se cumple.  
+     - Resultado esperado: `Los elementos inicial y final son iguales (0)`.
 
 
 ## Ejercicio 3: Añadir una nueva funcionalidad a la lista enlazada simple
 
-En este ejercicio, añadiremos nueva funcionalidad a la lista enlazada simple. Concretamente, crearemos la función `set_at` que permitirá modificar el valor de un elemento en una posición específica de la lista.
+En este ejercicio, añadiremos nueva funcionalidad a la lista enlazada simple. Concretamente, crearemos la función `set_at` que permitirá modificar el valor de un elemento en una posición específica de la lista. Consideraremos que las posiciones de los elementos son las siguientes: elemento al principio posición 1, siguiente elemento posición 2, etc.
 
 Para realizar este ejercicio, se proporcionan los siguientes archivos:
 - `uListaEnlazadaSimpleSetAt.pas`: Implementación de la lista enlazada simple. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. Deberás modificar este archivo para añadir la nueva funcionalidad.
 - `listas_ej3.pas`: Programa principal que utiliza la lista enlazada simple. No es necesario modificar este archivo.
 
-¿Qué rol tendremos en este ejercicio? Estamos añadiendo nueva funcionalidad a la lista enlazada simple, por lo que tendremos el "rol" de implementador de la unidad. Por lo tanto, deberemos modificar la unidad de la lista enlazada simple para añadir la nueva funcionalidad.
+¿Qué rol debes asumir en este ejercicio? Dado que estamos añadiendo nueva funcionalidad a la lista enlazada simple, tu "rol" es el de implementador del TAD lista. Por lo tanto, deberemos modificar la unidad de la lista enlazada simple para añadir la nueva funcionalidad.
 
 Ejemplo de uso de la función `set_at`:
 1.  Lista vacia `[ ]`  
@@ -215,7 +215,6 @@ Ejemplos de uso de la función `dividir_lista_en_pares_e_impares`:
     - Lista de pares esperada: `[]`
     - Lista de impares esperada: `[1, 3, 5]`
 
-
 Al ejecutar el programa principal `listas_ej4.pas`, se deben mostrar los resultados de las pruebas realizadas. Por ejemplo:
 
 ```
@@ -241,7 +240,6 @@ Ejercicio: Dividir lista en pares e impares
 ## Ejercicio 5: Unir dos listas enlazadas simples
 
 En este ejercicio, implementaremos un subprograma que reciba dos listas de enteros ordenadas y devuelva una nueva lista ordenada con los elementos de ambas listas. Las listas originales no deben ser modificadas.
-
 
 Para realizar este ejercicio, se proporcionan los siguientes archivos:
 - `uListaEnlazadaSimple.pas`: Implementación de la lista enlazada simple. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. No es necesario modificar este archivo.
@@ -302,15 +300,14 @@ Ejercicio: Unir listas ordenadas
   Estado lista inicial 2 sin modificar: bien.
 ```
 
-
 ## Ejercicio 6: Modificar la unidad de lista enlazada simple
 
-En este ejercicio, modificaremos la unidad de lista enlazada simple para incluir un array de frecuencias que cuente la cantidad de veces que cada número aparece en la lista. Para ello, se proporcionan los siguientes archivos:
+En este ejercicio, modificaremos la unidad de lista enlazada simple para incluir un array de frecuencias que cuente la cantidad de veces que cada entero entre `MIN_RANGE` y `MAX_RANGE` aparece en la lista. Para ello, se proporcionan los siguientes archivos:
 
 - `uListaEnlazadaSimpleMod.pas`: Implementación de la lista enlazada simple que debe ser modificada. Este fichero contiene la implementación de la lista enlazada simple que se utilizará en este ejercicio. Deberás modificar este archivo para añadir la nueva funcionalidad.
 - `listas_ej6.pas`: Programa principal que utiliza la lista enlazada simple modificada y comprueba su correcto funcionamiento. No debería ser necesario modificar este archivo.
 
-Tener una tabla de frecuencias requerira definir una estructura de datos auxiliar que almacene la frecuencia de cada número. En este caso, utilizaremos un array de enteros para almacenar las frecuencias de los números en el rango que puede ser especificado por  medio de constantes `MIN_RANGE` y `MAX_RANGE`.  Tener una tabla de frecuencias nos permitirá realizar operaciones como obtener la frecuencia de un número en tiempo constante (O(1)), verificar si un número está en la lista en tiempo constante (O(1)), etc.
+Tener una tabla de frecuencias requerira definir una estructura de datos auxiliar que almacene la frecuencia de cada número. En este caso, utilizaremos un array de enteros para almacenar las frecuencias de los números en el rango que puede ser especificado por medio de constantes `MIN_RANGE` y `MAX_RANGE`.  Tener una tabla de frecuencias nos permitirá realizar operaciones como obtener la frecuencia de un número en tiempo constante (O(1)), verificar si un número está en la lista en tiempo constante (O(1)), etc.
 
 ¿Qué rol tendremos en este ejercicio? Estaremos añadiendo nueva funcionalidad a la lista enlazada simple, por lo que tendremos el "rol" de implementador de la unidad. Por lo tanto, deberemos modificar la unidad de la lista enlazada simple para añadir la nueva funcionalidad.
 
@@ -343,7 +340,6 @@ Antes de que sigas leyendo, te recomendamos que intentes resolver el ejercicio p
 
 8. **Pruebas**:
     - Realiza pruebas para verificar que las modificaciones funcionan correctamente. Para ello, ejecuta el archivo `listas_ej3.pas`.
-
 
 
 # Ejercicios con Listas Enlazadas Circulares
@@ -408,6 +404,10 @@ Realiza las siguientes operaciones sobre listas enlazadas circulares y verifica 
 9. **Búsqueda de elemento (iterativa)**
 *   Verificar si el elemento `2` está en la lista.
 *   Resultado esperado: `El 2 está en la lista`
+
+10. **Generación de una lista con n elementos aleatorios **
+*   Crea una lista nueva y genera 10 enteros aleatorios entre 0 y 100. Introdúcelos en la lista por el final.
+*   Resultado posible:  `[13 51 23 24 65 71 30 98 11 8]`
 
 ## Ejercicio 8: Desarrollar funcionalidades de la unidad de lista enlazada circular con recursividad
 
