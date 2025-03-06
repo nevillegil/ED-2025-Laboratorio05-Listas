@@ -17,9 +17,25 @@ end;
     La lista original no debe ser modificada.
 }
 procedure dividir_lista_en_pares_e_impares(var list: tListaSimple; var pares, impares: tListaSimple);
+var
+    nodo_actual: tNodoPtr;
 begin
-    WriteLn('No implementado');
+    initialize(pares);
+    initialize(impares);
+
+    nodo_actual := list.first;
+
+    while current <> nil do
+    begin
+        if (current^.info mod 2 = 0) then
+            insert_at_end(pares, current^.info)  // Número par
+        else
+            insert_at_end(impares, current^.info);  // Número impar
+
+        current := current^.siguiente;
+    end;
 end;
+
 
 
 procedure crear_lista_1(var l: tListaSimple);
