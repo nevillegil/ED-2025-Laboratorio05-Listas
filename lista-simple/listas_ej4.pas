@@ -29,6 +29,12 @@ begin
     begin
         if (current^.info mod 2 = 0) then
             insert_at_end(pares, current^.info)  
+
+             else
+            insert_at_end(impares, current^.info);  
+
+        current := current^.sig;
+    end;
    
 end;
 
