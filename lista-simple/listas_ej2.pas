@@ -9,9 +9,11 @@ begin
 initialize(lista);
 
     // 2.2 Insertar elementos al final y mostrar lista
-insert_at_end(lista, 10);
-insert_at_end(lista, 20);
-insert_at_end(lista, 30);
+insert_at_end(lista, 1);
+insert_at_end(lista, 2);
+insert_at_end(lista, 3);
+insert_at_end(lista, 4);
+insert_at_end(lista, 5);
 writeln('Lista: ', to_string(lista));
 
     // 2.3 Obtener primer y último elemento, calcular diferencia
