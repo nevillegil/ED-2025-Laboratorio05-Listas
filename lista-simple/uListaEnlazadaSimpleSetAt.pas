@@ -235,9 +235,24 @@ implementation
     end;
 
     { Ejercicio 3 }
-    procedure set_at(var list: tListaSimple; pos: integer; x: integer);
+   procedure set_at(var list: tListaSimple; pos: integer; x: integer);
+var
+    current: ^nodo;
+    i: integer;
+begin
+    current := list.first;
+    i := 0;
+
+    while (current <> nil) and (i < pos) do
     begin
-        WriteLn('set_at: Not implemented');
+        current := current^.sig;
+        inc(i);
     end;
+
+    if current <> nil then
+        current^.info := x
+    else
+end;
+
 
 end.
