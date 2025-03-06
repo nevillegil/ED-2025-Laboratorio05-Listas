@@ -18,7 +18,7 @@ end;
 }
 procedure dividir_lista_en_pares_e_impares(var list: tListaSimple; var pares, impares: tListaSimple);
 var
-    current: tNodoPtr;
+    current: ^nodo;
 begin
     initialize(pares);
     initialize(impares);
