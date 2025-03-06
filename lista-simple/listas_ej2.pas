@@ -6,10 +6,17 @@ var
 
 begin
     // 2.1 Inicializar lista
+initialize(lista);
 
     // 2.2 Insertar elementos al final y mostrar lista
+insert_at_end(lista, 10);
+insert_at_end(lista, 20);
+insert_at_end(lista, 30);
+writeln('Lista: ', to_string(lista));
 
     // 2.3 Obtener primer y último elemento, calcular diferencia
+if not is_empty(lista) then
+    writeln('Diferencia: ', last(lista) - first(lista));
 
     // 2.4 Número de elementos, eliminar al inicio, limpiar lista
 
