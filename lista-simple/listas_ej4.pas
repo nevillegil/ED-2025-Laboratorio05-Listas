@@ -18,7 +18,7 @@ end;
 }
 procedure dividir_lista_en_pares_e_impares(var list: tListaSimple; var pares, impares: tListaSimple);
 var
-    nodo_actual: tNodoPtr;
+    current: tNodoPtr;
 begin
     initialize(pares);
     initialize(impares);
@@ -28,12 +28,8 @@ begin
     while current <> nil do
     begin
         if (current^.info mod 2 = 0) then
-            insert_at_end(pares, current^.info)  // Número par
-        else
-            insert_at_end(impares, current^.info);  // Número impar
-
-        current := current^.siguiente;
-    end;
+            insert_at_end(pares, current^.info)  
+   
 end;
 
 
