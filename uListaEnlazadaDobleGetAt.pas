@@ -206,10 +206,23 @@ implementation
     end;
 
 
-    { -- Ejercicio 11 -- }
-    function get_at(list: tListaDoble; position: integer): integer;
+{ -- Ejercicio 11 -- }
+function get_at(list: tListaDoble; position: integer): integer;
+var
+    current: ^nodo;
+    i: integer;
+begin
+    current := list.first;
+    i := 1;
+    while (current <> nil) and (i < position) do
     begin
-        WriteLn8(' No implementado');
+        current := current^.siguiente;
+        inc(i);
     end;
+    if current = nil then
+        get_at := -1  { o algún valor que indique que la posición no es válida }
+    else
+        get_at := current^.info;
+end;
 
-end.
+
