@@ -216,7 +216,7 @@ begin
     i := 1;
     while (current <> nil) and (i < position) do
     begin
-        current := current^.siguiente;
+        current := current^.sig;
         inc(i);
     end;
     if current = nil then
