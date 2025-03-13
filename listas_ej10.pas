@@ -74,7 +74,8 @@ if not is_empty(listaDoble) then
     
     // 10.13 La lista copia debe seguir existiendo
 
-    
+    writeln('Primer elemento es: ', first(listaCopia));
+    writeln('Último elemento es: ', last(listaCopia));
 
     readln; // Pausa para ver la salida
 end.
